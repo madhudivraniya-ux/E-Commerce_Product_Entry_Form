@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Info Card Generator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Product Info Card Generator</h1>
+
+    <div class="main-container">
+        <!-- FORM -->
+        <div class="form-container">
+
+            <label for="name">Product Name:</label>
+            <input type="text" id="name" placeholder="Enter Product Name">
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" placeholder="Enter Price">
+
+            <label for="description">Description:</label>
+            <textarea id="description" placeholder="Enter Product Description"></textarea>
+
+            <label for="image">Product Image URL:</label>
+            <input type="text" id="image" placeholder="Enter Image URL">
+
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="">Select Category</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Furniture">Furniture</option>
+                <option value="Books">Books</option>
+                <option value="Sports">Sports</option>
+            </select>
+
+            <label for="rating">Rating:</label>
+            <span id="ratingValue">2.5</span>/5
+            <input type="range" id="rating" min="0" max="5" step="0.5" value="2.5">
+
+            <label for="warranty">Warranty:</label>
+            <input type="text" id="warranty" placeholder="e.g., 6 Months">
+
+            <label for="company">Company Name:</label>
+            <input type="text" id="company" placeholder="Enter Company Name">
+
+            <label for="returnPolicy">Return Policy:</label>
+            <input type="text" id="returnPolicy" placeholder="">
+
+            <button id="generatorBtn">Submit</button>
+        </div>
+
+        <!-- CARD DISPLAY -->
+        <div class="card-container">
+            <div class="product-card" id="productcard">
+                <img src="https://via.placeholder.com/300x200" alt="Product Photo" class="product-photo" id="cardImage">
+
+                <h2 id="cardName">Product Name</h2>
+                <p id="cardPrice">Price: ₹--</p>
+                <p id="cardDescription">Description: --</p>
+                <p id="cardCategory">Category: --</p>
+                <p id="cardRating">Rating: --</p>
+                <p id="cardWarranty">Warranty: --</p>
+                <p id="cardCompany">Company: --</p>
+                <p id="cardReturn">Return Policy: --</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
